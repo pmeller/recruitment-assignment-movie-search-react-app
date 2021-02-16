@@ -35,3 +35,4 @@ rules:
     - newlines-between: always
       alphabetize:
         order: asc
+  react/prop-types: off

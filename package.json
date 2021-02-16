@@ -14,8 +14,11 @@
     "format-assets": "prettier --write './**/*.{json,yml,yaml,md,html}'"
   },
   "dependencies": {
+    "polished": "^4.1.0",
+    "querystring": "^0.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "rxjs": "^6.6.3",
     "styled-components": "^5.2.1",
     "styled-reset": "^4.3.4"
   },

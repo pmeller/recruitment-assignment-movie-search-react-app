@@ -2,7 +2,7 @@ arrowParens: avoid
 bracketSpacing: true
 jsxSingleQuote: true
 printWidth: 120
-proseWrap: never
+proseWrap: always
 semi: false
 singleQuote: true
 tabWidth: 2
