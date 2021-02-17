@@ -33,7 +33,7 @@ const webpackConfig: webpack.Configuration = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({ title: 'MovieSearch App' }),
     new ForkTsCheckerWebpackPlugin(),
     new ForkTsCheckerNotifierWebpackPlugin(),
   ],

@@ -42,7 +42,7 @@ Main inspirations for this application:
 - **Movies listing as grid of card with large posters** - In my opinion displaying visual content (like posters) for
   movies listing is must-have and that's why I decided to use TMDB API for this task
 - **Load more button** - UI allows to load more results with a button, it seems suitable for simple search. For advanced
-  search probably standard pagination would be more usable.
+  search (i.e. with detailed parameters) probably standard pagination would be more usable.
 - **Redirect to movie details** - UI needs to provide some meaningful action after searching, currently it redirect to
   TMDB webiste for simplicity.
 
@@ -79,8 +79,8 @@ Due to limited time for implementation this project is not perfect. Here's list 
 
 ## Potential features
 
-- **Better visual/interaction/motion design** - The design is not the best in the world so it could be improved a lot,
-  for example fancier animations added
+- **Better visual/interaction/motion design** - Current UI design is very simple and could be improved a lot, for
+  example animations added
 - **Switching between card view/list view** - Card view has some disadventages in terms of scannability, some switch
   between card view/list view could be welcome (especially for narrow mobile views).
 - **Virtual scroll or standard pagination** - Dynamically loading new listing element to the screen has performance
@@ -102,3 +102,6 @@ Due to limited time for implementation this project is not perfect. Here's list 
 - **General refactoring** - The code was never peer reviewed so it definetely contains a lot of flaws.
 - **Bundle size optimization** - Application size could be reduced.
 - **Routing** - Update URL in browser bar when changing a query.
+- **RWD optimization** - Some aspects of RWD could be optimized, for example better image handling for different
+  resolutions and screens with higher pixel density (e.g. Retina), current solution uses the same poster resolution for
+  every screen size

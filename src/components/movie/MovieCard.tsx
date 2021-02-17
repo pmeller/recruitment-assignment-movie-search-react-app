@@ -9,7 +9,9 @@ export const MovieCard: React.FunctionComponent<{ movie: Movie }> = ({ movie }) 
 
   return (
     <Container href={getMovieDetailsUrl(movie)} target='_blank'>
-      <PosterWrapper>{posterUrl && <Poster src={posterUrl} />}</PosterWrapper>
+      <PosterWrapper>
+        {posterUrl ? <Poster src={posterUrl} /> : <NoPosterMessage>Poster not available</NoPosterMessage>}
+      </PosterWrapper>
       <Title>
         {movie.title}
         {movie.releaseYear && ` (${movie.releaseYear})`}
@@ -29,6 +31,21 @@ const PosterWrapper = styled.div`
   background-color: ${Color.Gray2};
 `
 
+const NoPosterMessage = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: ${Color.Gray5};
+  font-size: ${GlobalDesignTokens.Typography.FontSize.XS};
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+`
+
 const Poster = styled.img`
   position: absolute;
   top: 0;
@@ -43,12 +60,15 @@ const Title = styled.p`
   font-weight: bold;
   line-height: ${unit(3)};
   margin-top: ${unit(1)};
+  transition: color 0.3s;
+  text-align: center;
 `
 
 const OriginalTitle = styled.p`
   font-size: ${GlobalDesignTokens.Typography.FontSize.S};
   font-style: italic;
   line-height: ${unit(2)};
+  text-align: center;
 `
 
 const Container = styled.a`
@@ -58,6 +78,10 @@ const Container = styled.a`
   &:hover {
     ${Poster} {
       transform: scale(1.1);
+    }
+
+    ${Title} {
+      color: ${Color.LightBlue};
     }
   }
 `
